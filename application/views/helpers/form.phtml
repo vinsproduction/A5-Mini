@@ -1,0 +1,46 @@
+
+<?/* ERRORS FROM CONTROLLER */?>
+<? if( isset($errors) && !empty($errors) ) :?>
+	
+	<? foreach($errors as $error) :?>
+		<p style="color:red"><?= $error ?></p>
+	<? endforeach; ?>
+	
+<? endif; ?>
+
+<?/* РЕНДЕР ФОРМЫ */?>
+<?= $Form->render(); ?>
+
+
+
+<?/* 
+	 Замена textarea на Редактор, по id( в данном случае это 'content')
+	 [ http://imperavi.com/redactor/docs ]
+	 ПРИМЕР для controller:	 
+	 $redactors = array("content");
+	 image_upload" : "admin/redactor_upload" - обработчик загрузки
+
+*/?>
+
+
+<? if( isset($redactors) ) :?>
+
+	<script type="text/javascript">
+		
+		$(document).ready(
+			function()
+			{
+				<? foreach($redactors as $id)  :?>
+					$('#<?= $id ?>').redactor({
+						toolbar: 'main',
+						imageUpload  : "admin/redactor_upload",
+						focus: false
+									
+					});
+				<? endforeach;?>
+			}
+		);
+		
+	</script>
+
+<? endif; ?>

@@ -1,0 +1,32 @@
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="/js/helpers.js"></script>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		
+	<!--[if lt IE 8]>
+	<script src="/js/json2.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+	
+		var A5 = {
+			controller 	: '<?= controller(); ?>',
+			action 		: '<?= action(); ?>',
+			debug		: '<?= DEBUG_MODE; ?>',
+			cookie		: <?= json_encode($_COOKIE); ?>
+		}
+		
+	</script>
+	
+	
+	<? if( !DEBUG_MODE ):?>
+	<!-- Disable console.log() in browser -->	
+	<script type="text/javascript">disableConsole();</script>
+	<? endif; ?> 

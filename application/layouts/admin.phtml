@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+	
+    <!-- Le styles -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="/admin/css/bootstrap-responsive.min.css" rel="stylesheet"> -->
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="/js/redactor/redactor.js"></script>
+	<link type="text/css" rel="stylesheet" href="/js/redactor/css/redactor.css"  />
+    
+  
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div style="height: 5px;"></div>
+		<div class="navbar">
+		  <div class="navbar-inner">
+		    <div class="container">
+                <a class="brand" href="/admin">Админко 2.0</a>
+				<ul class="nav">
+				  <li><a href="/">Сайт</a></li>
+				  <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">Администрирование <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Пользователи</a></li>
+                        <li><a href="#">Статистика</a></li>
+                        <li><a href="#">Правила отношений</a></li>
+                        <li><a href="#">Истории любви</a></li>
+                        <li class="#"></li>
+                        <li><a href="#">Прочее</a></li>                       
+                      </ul>
+                  </li>
+				  <li><a href="#">Конкурс <span class="badge">1</span></a></li>
+				   <li><a href="#">Я: noname</a></li>
+				</ul>				
+		    </div>
+		  </div>
+		</div>  
+		
+		<? include_view() ?>
+		
+    </div>
+  </body>
+</html>
