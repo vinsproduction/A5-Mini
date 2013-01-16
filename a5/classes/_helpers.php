@@ -731,7 +731,7 @@ function varexp($vars = '')
 	
 	print '<hr>';
 	
-	if( !in_array('noexit',$args, true) || $vars === null) { exit; }
+	exit;
 
 }
 
