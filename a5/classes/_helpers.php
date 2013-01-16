@@ -703,7 +703,7 @@ function if_ok($var){
 // Добротный var_export :)
 // Example: varexp(array('a'=>'asdasd'),array('2'=>'33333'),'noexit');
 
-function varexp($vars)
+function varexp($vars = '')
 {
 
 	$numargs = func_num_args();
@@ -735,7 +735,7 @@ function varexp($vars)
 
 }
 
-function varexp_($vars)
+function varexp_($vars = '')
 {
 
 	$numargs = func_num_args();
