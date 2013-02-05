@@ -1,0 +1,21 @@
+
+/* HELPERS!!! */
+
+
+.h-line { height: 20px;}
+
+.h-right { text-align: right !important; }
+.h-center{ text-align: center !important; }
+
+
+.h-bold { font-weight: bold !important; }
+.h-italic { font-style: italic !important; }
+.h-justify { text-align: justify !important; }
+
+.h-gray { color: #7A7A7A !important; }
+.h-black { color:#000 !important; }
+.h-white { color:#FFF !important; }
+
+a.h-black { color:#000 !important; }
+a.h-black:hover { color:#000 !important; }
+

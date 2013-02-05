@@ -1,0 +1,144 @@
+
+@font-face {
+    font-family: 'RotondaC';
+    src: url('/fonts/rotondac-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ============ FORMS ============== */
+/*
+input:focus,
+textarea:focus {
+
+  border-color: rgba(121, 122, 122, 0.8); 
+  outline: 0;
+  outline: thin dotted \9;
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(121,122,122,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(121,122,122,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(121,122,122,.6);
+
+}
+label {
+	color: rgba(102, 102, 102, 1); 	
+}
+button{
+
+	background-color: #ED8B34;
+	border-width: 0px;
+	line-height: 18px;
+	color: #FFF;
+	font-size: 18px;
+	display: inline-block;
+	padding: 4px 30px 4px 30px;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+
+}
+*/
+
+/* ============ MODALS  ============== */
+/*
+.modal-body  {
+	max-height: 800px;
+	overflow-y: auto;	
+}
+
+.modal-header .close {
+	margin-left: 10px;
+}
+
+.modal.fade.in {
+	top: 50%;
+}
+.modal-header {
+	padding: 9px 15px;
+	border-bottom: 0px;
+}
+*/
+
+
+/* Main tags
+----------------------------------------- */
+
+html, body, p {
+	/* if need change font: */
+	font-family: 'OpenSans';
+	color: black;
+}
+
+body { 
+	padding-top: 40px;
+	position: relative;
+}
+
+section {
+	margin-top: 20px;
+	margin-bottom: 70px;
+	padding-top: 20px;		
+	padding-left:10px;
+	padding-right:10px;	
+}
+
+footer {
+	text-align: center;
+	padding: 30px 0;
+	border-top: 1px solid #E5E5E5;
+	background-color: whiteSmoke;
+}
+
+
+
+/* ============ MEDIA всегда должно быть ниже остальных стилей  ============== */
+
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+	body {
+		padding-top: 0;
+	}
+	section {
+		padding-top: 20px;
+		margin-top: 60px;
+	}
+	
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+	body {
+		padding-top: 0;
+	}
+	section {
+		margin-top: 0;
+	}
+	footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+	body {
+		padding-top: 0
+	}
+	section {
+		padding-top: 20px;
+		margin-top: 60px;
+	}
+	footer {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+
