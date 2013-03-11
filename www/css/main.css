@@ -1,8 +1,8 @@
 
 /* include css files */
 
-@import url(/css/bootstrap.min.css);
-@import url(/css/bootstrap-responsive.css);
+@import url(/bootstrap/css/bootstrap.min.css);
+@import url(/bootstrap/css/bootstrap-responsive.css);
 
 @import url(/css/helpers.css);
 @import url(/css/layout.css);
