@@ -16,6 +16,5 @@ if (!defined("PUBLIC_DIR")) { define("PUBLIC_DIR", realpath(dirname(__FILE__) . 
 // Если он не указан, вы должны указать здесь полный путь к этому файлу.
 // Если ядро системы на сервере не установлено, вы можете записать его вместе со своим приложением,
 // например в папку application.
-// require_once(APP_DIR . "/a5/boot.php");
 
-require_once(APP_DIR."/../../a5/boot.php");
+require_once(APP_DIR."/a5/boot.php");
