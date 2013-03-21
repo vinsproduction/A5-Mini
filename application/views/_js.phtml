@@ -20,7 +20,6 @@
 			controller 	: '<?= controller(); ?>',
 			action 		: '<?= action(); ?>',
 			debug		: '<?= DEBUG_MODE; ?>',
-			cookie		: <?= json_encode($_COOKIE); ?>
 		}
 		
 	</script>
@@ -28,5 +27,5 @@
 	
 	<? if( !DEBUG_MODE ):?>
 	<!-- Disable console.log() in browser -->	
-	<script type="text/javascript">disableConsole();</script>
+	<script type="text/javascript"> $$.disableConsole(); </script>
 	<? endif; ?> 

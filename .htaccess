@@ -1,2 +1,33 @@
+php_flag register_globals off
+php_flag magic_quotes_gpc off
+php_flag register_long_arrays off
+php_flag short_open_tag on
+php_value upload_max_filesize 100M
+php_value post_max_size 150M
+
+AddDefaultCharset utf-8
+
+# Ставим для статических документов заголовок Expires +1 час от доступа
+# Для предотвращения лишних запросов от браузера
+<IfModule mod_expires.c>
+	<Files ~ "\.(gif|jpe?g|png|bmp|css|js)$">
+	ExpiresActive On
+	ExpiresDefault "access plus 1 hour"
+	</Files>
+</IfModule>
+
+Options -MultiViews +FollowSymLinks
+
 RewriteEngine On
-RewriteRule ^(.*)$ /www/
+
+# Если ваш сайт работает под управлением VirtualDocumentRoot окружением apache
+# То раскомментируйте данную директиву для корректной работы mod_rewrite
+# RewriteBase /
+
+# Если сайт располагается в подпапке, например http://www.example.com/your_site/
+# то раскомментируйте для корректной работы следующую директиву 
+# RewriteBase /your_site
+
+# Передаём управление обработчику если запрашиваемый файл не существует на диске
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ dispatcher.php [QSA,L]

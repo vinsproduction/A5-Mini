@@ -3,18 +3,6 @@
 
 
 
-/* Api(methodName, {params}, callback). */
-
-var Api = function(methodName, params, callback){
-
-	methodName = methodName.replace('.','/');
-	ajaxPost('/api/'+ methodName,params,function(data){					
-		if(callback) callback(data);					
-	});
-}
-
-
-
 /* /js/jquery.cookie.js */
 
 var Cookie = {
