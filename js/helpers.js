@@ -343,7 +343,9 @@ var helpers_is_good = {}, // ORIGINAL NAMESPACE
 
 	}
 
-	/* PLACEHOLDER FOR FORM INPUTS  */
+	/* PLACEHOLDER FOR FORM INPUTS  
+		use: $$.placeholder($('input[name="name"]'),'Имя');
+	*/
 
 	$.placeholder = function(element,value){
 	    element.focus(function(){
