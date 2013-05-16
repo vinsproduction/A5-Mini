@@ -83,9 +83,9 @@ var helpers_is_good = {}, // ORIGINAL NAMESPACE
 	$.isObject = function(obj) { return Object.prototype.toString.call(obj) === '[object Object]'; }
 	
 	$.isEmpty = function(o){
-		if( isString(o) ) {return (trim(o) ===  "") ? true : false;}
-		if( isArray(o) )  {return (o.length === 0) ? true : false;}
-		if( isObject(o) ) {for(var i in o){ if(o.hasOwnProperty(i)){return false;} } return true; }
+		if( $.isString(o) ) {return ($.trim(o) ===  "") ? true : false;}
+		if( $.isArray(o) )  {return (o.length === 0) ? true : false;}
+		if( $.isObject(o) ) {for(var i in o){ if(o.hasOwnProperty(i)){return false;} } return true; }
 	}
 	$.stripHTML = function(text) { return text ? text.replace(/<(?:.|\s)*?>/g, '') : ''; }
 	$.escapeHTML = function(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
