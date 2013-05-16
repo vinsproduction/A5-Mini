@@ -343,6 +343,19 @@ var helpers_is_good = {}, // ORIGINAL NAMESPACE
 
 	}
 
+	/* PLACEHOLDER FOR FORM INPUTS  */
+
+	$.placeholder = function(element,value){
+	    element.focus(function(){
+	        if(element.val() == value) element.val('');         
+	    }).
+	    blur(function(){
+	        if(element.val() == '') element.val(value);
+	    });
+
+	    element.blur();
+	}
+
 
 	
 })(helpers_is_good);
